@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felixosis</title>
+
+    <!-- Custome CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Box Icons link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+    
+
+    <!-- Home Section Start -->
+    <section class="home" style="background: #c41919 !important; height: 100% !important;">
+    
+        <!-- Header Section Start -->
+        <header class="header">
+    
+            <a href="#" class="logo">
+                <p>Apostle</p>
+                <h1>Felixosis</h1>
+            </a>
+    
+            <nav class="nav">
+                <a href="./index.htm">Home</a>
+                <a href="./portfolio.htm">Streams</a>
+                <a href="./store.htm">Blog</a>
+                <a href="./contact.htm">Contact</a>
+                <a href="#">
+                    <button class="btn__donate">GIVE</button>
+                </a>
+                <i class='bx bx-search-alt-2' id="search-icon"></i>
+                <div class="line"></div>
+            </nav>
+        </header>
+        <!-- Header Section End -->
+
+        <div class="container-about">
+            <div class="title">
+                <h1>AP.FELIXOSIS</h1>
+            </div>
+            <div class="image">
+                <img src="./images/about.jpg" alt="">
+            </div>
+            <div class="content">
+                <p>
+                    WELCOME TO THE OFFICIAL PAGE OF APOSTLE FELIXOSIS OF THE JESUS NATION CHURCH. HERE, YOU CAN EXPLORE
+                    THE LIFE, MISSION, AND MINISTRY OF A DEVOTED SERVANT OF CHRIST WHO HAS DEDICATED HIS LIFE TO SPREADING
+                    THE GOSPELAND SERVING THE GLOBALCOMMUNITYTHROUGHFAITH, LOVE,AND UNWAVERING COMMITMENT.
+                    BIOGRAPHY
+                </p>
+            </div>
+        </div>
+
+
+        <!-- Footer Section Start -->
+       <footer class="footer">
+           <div class="footer-container">
+               <div class="footer-info">
+                   <p>Email: <a href="mailto:apostlefelixosis@gmail.com">apostlefelixosis@gmail.com</a></p>
+                   <p>Phone: <a href="tel:+0111011121">011 101 1121</a></p>
+                   <p>Location: Johannesburg</p>
+               </div>
+               <div class="footer-social">
+                   <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
+                   <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
+                   <a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
+               </div>
+           </div>
+       </footer>
+       <!-- Footer Section End -->
+    </section>
+    <!-- Home Section End -->
+
+    <!-- GSAP Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        // Animate the container-about section on scroll
+        gsap.from(".container-about", {
+            scrollTrigger: {
+                trigger: ".container-about", // Trigger animation when .container-about enters the viewport
+                start: "top 80%",            // Start animation when the top of .container-about is 80% of the viewport height
+                end: "bottom 20%",           // End animation when the bottom of .container-about is 20% of the viewport height
+                toggleActions: "play reverse play reverse", // Play animation when entering, reverse when leaving
+            },
+            duration: 2.5,    // Animation duration
+            x: 500,           // Start with 100px downward position
+            opacity: 0,       // Start with opacity 0
+            ease: "power3.out", // Easing function
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felixosis</title>
+
+    <!-- Custome CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Box Icons link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <!-- Home Section Start -->
+    <section class="home" style="background: #c41919 !important;">
+    
+        <!-- Header Section Start -->
+        <header class="header">
+    
+            <a href="#" class="logo">
+                <p>Apostle</p>
+                <h1>Felixosis</h1>
+            </a>
+    
+            <nav class="nav">
+                <a href="./index.htm">Home</a>
+                <a href="./about.htm">About Us</a>
+                <a href="./store.htm">Blog</a>
+                <a href="./contact.htm">Contact</a>
+                <a href="#">
+                    <button class="btn__donate">GIVE</button>
+                </a>
+                <i class='bx bx-search-alt-2' id="search-icon"></i>
+                <div class="line"></div>
+            </nav>
+        </header>
+        <!-- Header Section End -->
+
+        <!-- <div class="portfolio-title">
+            <i class='bx bxl-youtube' style='color:#e4060c'  ></i>
+            <div class="line"></div>
+        </div> -->
+
+        <div class="portfolio" style="background: #c41919 !important;">
+            <div class="title">
+                <h1>Streams</h1>
+            </div>
+
+            <!-- <div class="live-stream">
+                <div class="info">
+                    <h1>Join Live Stream</h1>
+                    <button class="btn__donate">Join</button>
+                </div>
+                <img src="images/livestream.jpg" alt="">
+            </div> -->
+    
+            <div class="container">
+                <div class="box">
+                    <a href="https://youtu.be/DlBrnhBUFxQ?si=lVkPpH_iqaXpG7-I">
+                    <i class='bx bxl-youtube' style='color:#e4060c'  ></i>
+                    <video autoplay loop muted class="black-and-white">
+                        <source href="https://youtu.be/DlBrnhBUFxQ?si=lVkPpH_iqaXpG7-I" type="video/mp4">
+                    </video>
+                    <h1>Watch Now</h1>
+                </a>
+                </div>
+                <div class="box">
+                    <a href="https://youtu.be/_nhpEktvfCw?si=X2eG82VpZr11cQh6">
+                    <i class='bx bxl-youtube' style='color:#e4060c'  ></i>
+                    <video autoplay loop muted class="black-and-white">
+                        <source src="videos/video2.mp4" type="video/mp4">
+                    </video>
+                    <h1>Watch Now</h1>
+                </a>
+                </div>
+                <div class="box">
+                    <a href="https://youtu.be/_nhpEktvfCw?si=X2eG82VpZr11cQh6">
+                    <i class='bx bxl-youtube' style='color:#e4060c'  ></i>
+                    <video autoplay loop muted class="black-and-white">
+                        <source src="videos/video3.mp4" type="video/mp4">
+                    </video>
+                    <h1>Watch Now</h1>
+                </a>
+                </div>
+                <div class="box">
+                    <a href="https://youtu.be/_nhpEktvfCw?si=X2eG82VpZr11cQh6">
+                    <i class='bx bxl-youtube' style='color:#e4060c'  ></i>
+                    <video autoplay loop muted class="black-and-white">
+                        <source src="videos/video4.mp4" type="video/mp4">
+                    </video>
+                    <h1>Watch Now</h1>
+                </a>
+                </div>
+                <div class="box">
+                    <a href="https://youtu.be/_nhpEktvfCw?si=X2eG82VpZr11cQh6">
+                    <i class='bx bxl-youtube' style='color:#e4060c'  ></i>
+                    <video autoplay loop muted class="black-and-white">
+                        <source src="videos/video5.mp4" type="video/mp4">
+                    </video>
+                    <h1>Watch Now</h1>
+                </a>
+                </div>
+                <div class="box">
+                    <a href="https://youtu.be/_nhpEktvfCw?si=X2eG82VpZr11cQh6">
+                    <i class='bx bxl-youtube' style='color:#e4060c'  ></i>
+                    <video autoplay loop muted class="black-and-white">
+                        <source src="videos/video6.mp4" type="video/mp4">
+                    </video>
+                    <h1>Watch Now</h1>
+                </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Home Section Start -->
+
+    <!-- GSAP and ScrollTrigger Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        // Animate each box in the portfolio section when scrolling down
+        gsap.from(".box", {
+            scrollTrigger: {
+                trigger: ".portfolio", // Start the animation when the .portfolio section enters the viewport
+                start: "top 80%",      // When the top of the .portfolio section reaches 80% of the viewport height
+                end: "bottom 20%",     // When the bottom of the .portfolio section reaches 20% of the viewport height
+                toggleActions: "play reverse play reverse", // Play when entering, reverse when leaving
+            },
+            duration: 6,         // Animation duration
+            x: -400,              // Start position (100px down)
+            opacity: 0,          // Start with opacity 0
+            stagger: 0.2,        // Stagger the animation for each box by 0.2 seconds
+            ease: "power3.out",  // Easing function
+        });
+
+        // Animate the live-stream section with scale and opacity on scroll
+        gsap.from(".live-stream", {
+            scrollTrigger: {
+                trigger: ".live-stream",  // Start the animation when the .live-stream section enters the viewport
+                start: "top 80%",         // When the top of .live-stream reaches 80% of the viewport height
+                end: "bottom 20%",        // When the bottom of .live-stream reaches 20% of the viewport height
+                toggleActions: "play reverse play reverse", // Play when entering, reverse when leaving
+            },
+            duration: 3.5,       // Animation duration
+            scale: 0.3,          // Start with smaller size (80% of normal)
+            opacity: 0.1,        // Start with 50% opacity
+            ease: "power3.out",  // Easing function
+        });
+
+    </script>
+</body>
+</html>
