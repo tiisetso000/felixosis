@@ -57,13 +57,13 @@ body {
     color: var(--bg-dark);
     font-family: myFont;
     letter-spacing: 13px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-transform: uppercase;
 }
 
 .logo h1 {
     color: var(--bg-dark);
-    font-size: 4.7rem;
+    font-size: 4rem;
     text-transform: uppercase;
     font-family: "Antonio", sans-serif;
 }
@@ -139,7 +139,7 @@ nav a {
 
 .content .left h1 {
     color: var(--white);
-    font-size: 3.3rem;
+    font-size: 3rem;
     text-transform: uppercase;
 }
 
@@ -245,11 +245,13 @@ nav a {
 .tickets .container .box .details h1 {
     color: #fff;
     margin-top: 1rem;
+    font-size: 1.7rem;
 }
 
 .tickets .container .box .details p {
     color: #fff;
     margin-top: .4rem;
+    font-size: 1.3rem;
 }
 
 .tickets .container .box .details h3 {
@@ -264,8 +266,9 @@ nav a {
     margin-top: 2rem;
 }
 
-.tickets .container .box .location h3 {
-    color: #fff
+.tickets .container .box .location p {
+    color: #fff;
+    font-size: 1.6rem;
 }
 
 .tickets .container .box .tickets__btn {
@@ -858,22 +861,36 @@ nav a {
 
 /* Footer Styling */
 .footer {
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    margin-top: 50px;
+    height: 30rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .footer-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 10rem;
+    text-align: start;
 }
 
 .footer-info p {
     margin: 10px 0;
+}
+
+.footer-info .title {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+.footer-info h4 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
 }
 
 .footer-info a {
@@ -883,6 +900,13 @@ nav a {
 
 .footer-info a:hover {
     text-decoration: underline;
+}
+
+.footer-info .info {
+    margin-bottom: 2rem;
+}
+.footer-info .info p {
+    font-size: 0.8rem;
 }
 
 .footer-social {
@@ -899,6 +923,43 @@ nav a {
 .footer-social a:hover {
     color: var(--main2);
 }
+
+
+
+
+
+/* Footer Styling */
+.footer-terms {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    height: 10rem;
+    text-align: center;
+}
+
+.footer-terms-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-terms-info {
+    margin-top: 2rem;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #fbfbfb;
+}
+
+.site-credit {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #fbfbfb;
+}
+
 
 
 
